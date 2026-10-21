@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | B.Tech Student</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            800: '#112240',
+                            900: '#0a192f',
+                        },
+                        accent: '#64ffda', // Cyan/Teal accent
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a192f;
+            color: #ccd6f6;
+        }
+        
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a192f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #112240;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64ffda;
+        }
+
+        /* Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Typing effect for the hero section */
+        .typing-text {
+            border-right: 2px solid #64ffda;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #64ffda; }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-accent selection:text-navy-900 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-navy-900/90 backdrop-blur-sm border-b border-navy-800 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-accent font-bold text-2xl tracking-tighter">&lt;Dev/&gt;</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#skills" class="hover:text-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#projects" class="hover:text-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#contact" class="border border-accent text-accent hover:bg-accent/10 transition-colors px-4 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-accent focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#about" class="block hover:text-accent px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#skills" class="block hover:text-accent px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#projects" class="block hover:text-accent px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="#contact" class="block text-accent px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="space-y-5">
+                <p class="text-accent font-mono">Hi, my name is</p>
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-100">ARTI GANGWAR.</h1>
+                <h2 class="text-4xl md:text-6xl font-bold text-gray-400">I build things for the web.</h2>
+                <div class="inline-block">
+                    <p class="text-lg md:text-xl text-gray-400 max-w-xl mt-4 typing-text inline-block">
+                        1st Year B.Tech Student & Aspiring Developer.
+                    </p>
+                </div>
+                <p class="text-gray-400 max-w-xl mt-4 leading-relaxed">
+                    I'm an enthusiastic engineering student currently diving deep into the world of programming. I'm focusing on building a strong foundation in Java and creating responsive web interfaces using HTML & CSS.
+                </p>
+                <div class="pt-8">
+                    <a href="#projects" class="border border-accent text-accent hover:bg-accent/10 transition-all duration-300 px-8 py-4 rounded-md text-lg font-medium inline-block">
+                        Check out my work!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-navy-800/30">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="flex items-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-100 flex-shrink-0">About Me</h2>
+                <div class="h-px bg-navy-800 w-full ml-6"></div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-2/3 space-y-4 text-gray-400 leading-relaxed text-lg">
+                    <p>
+                        Hello! My name is Alex and I enjoy creating things that live on the internet. My interest in web development started back in high school when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
+                    </p>
+                    <p>
+                        Fast-forward to today, I am a <strong>1st-year B.Tech student</strong> majoring in Computer Science. My main focus these days is understanding object-oriented programming concepts through Java, while keeping my creative side alive by designing web pages.
+                    </p>
+                    <p>
+                        I'm eager to learn, build, and grow. I'm currently looking for opportunities to collaborate on beginner-friendly open-source projects or campus tech clubs.
+                    </p>
+                </div>
+                <div class="md:w-1/3 relative group">
+                    <!-- Placeholder Avatar -->
+                    <div class="relative w-64 h-64 mx-auto rounded-lg overflow-hidden border-2 border-accent/50 group-hover:border-accent transition-all duration-300">
+                        <div class="absolute inset-0 bg-accent/20 group-hover:bg-transparent transition-all duration-300 z-10"></div>
+                        <img src="https://placehold.co/400x400/112240/64ffda?text=Photo" alt="Profile" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-300">
+                    </div>
+                    <!-- Decorative background box -->
+                    <div class="absolute w-64 h-64 border-2 border-accent rounded-lg top-4 left-4 -z-10 group-hover:top-2 group-hover:left-2 transition-all duration-300 md:mx-auto md:right-0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="flex items-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-100 flex-shrink-0">My Skills</h2>
+                <div class="h-px bg-navy-800 w-full ml-6"></div>
+            </div>
+            
+            <p class="text-gray-400 mb-8 text-center">Here are a few technologies I’ve been working with recently:</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                
+                <!-- Skill 1: HTML -->
+                <div class="bg-navy-800 p-6 rounded-lg shadow-lg border border-navy-800 hover:border-accent/50 transition-colors">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-gray-200 font-semibold flex items-center gap-2"><i class="fab fa-html5 text-orange-500"></i> HTML5</span>
+                        <span class="text-accent text-sm">Learning</span>
+                    </div>
+                    <div class="w-full bg-navy-900 rounded-full h-2.5">
+                        <div class="bg-accent h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2">Structure & Semantics</p>
+                </div>
+
+                <!-- Skill 2: CSS -->
+                <div class="bg-navy-800 p-6 rounded-lg shadow-lg border border-navy-800 hover:border-accent/50 transition-colors">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-gray-200 font-semibold flex items-center gap-2"><i class="fab fa-css3-alt text-blue-500"></i> CSS3</span>
+                        <span class="text-accent text-sm">Learning</span>
+                    </div>
+                    <div class="w-full bg-navy-900 rounded-full h-2.5">
+                        <div class="bg-accent h-2.5 rounded-full" style="width: 70%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2">Styling, Flexbox & Grid</p>
+                </div>
+
+                <!-- Skill 3: Java -->
+                <div class="bg-navy-800 p-6 rounded-lg shadow-lg border border-navy-800 hover:border-accent/50 transition-colors md:col-span-2">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-gray-200 font-semibold flex items-center gap-2"><i class="fab fa-java text-red-500"></i> Java</span>
+                        <span class="text-accent text-sm">Currently Focusing</span>
+                    </div>
+                    <div class="w-full bg-navy-900 rounded-full h-2.5">
+                        <div class="bg-accent h-2.5 rounded-full" style="width: 50%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2">OOP concepts, Data Types, Control Structures (B.Tech Syllabus)</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-navy-800/30">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="flex items-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-100 flex-shrink-0">Some Things I've Built</h2>
+                <div class="h-px bg-navy-800 w-full ml-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Project 1 -->
+                <div class="bg-navy-800 rounded-lg p-6 flex flex-col h-full transform hover:-translate-y-2 transition-all duration-300 shadow-xl border border-transparent hover:border-accent/30 group">
+                    <div class="flex justify-between items-center mb-6">
+                        <i class="far fa-folder text-4xl text-accent"></i>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i class="fab fa-github text-xl"></i></a>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-200 mb-3 group-hover:text-accent transition-colors">Console Calculator</h3>
+                    <p class="text-gray-400 mb-6 flex-grow text-sm">
+                        A basic command-line calculator built to understand control flow, switch cases, and user input scanning in Java. My first academic mini-project!
+                    </p>
+                    <ul class="flex text-xs font-mono text-gray-500 space-x-4 mt-auto">
+                        <li>Java</li>
+                        <li>Scanner Class</li>
+                    </ul>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-navy-800 rounded-lg p-6 flex flex-col h-full transform hover:-translate-y-2 transition-all duration-300 shadow-xl border border-transparent hover:border-accent/30 group">
+                    <div class="flex justify-between items-center mb-6">
+                        <i class="far fa-folder text-4xl text-accent"></i>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i class="fas fa-external-link-alt text-xl"></i></a>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-200 mb-3 group-hover:text-accent transition-colors">Static Landing Page</h3>
+                    <p class="text-gray-400 mb-6 flex-grow text-sm">
+                        A responsive single-page layout mimicking a startup landing page. Built from scratch to practice CSS Flexbox and positioning.
+                    </p>
+                    <ul class="flex text-xs font-mono text-gray-500 space-x-4 mt-auto">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-navy-800 rounded-lg p-6 flex flex-col h-full transform hover:-translate-y-2 transition-all duration-300 shadow-xl border border-transparent hover:border-accent/30 group">
+                    <div class="flex justify-between items-center mb-6">
+                        <i class="far fa-folder text-4xl text-accent"></i>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i class="fab fa-github text-xl"></i></a>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-200 mb-3 group-hover:text-accent transition-colors">Student Record System</h3>
+                    <p class="text-gray-400 mb-6 flex-grow text-sm">
+                        (Work in Progress) A simple Java program utilizing Arrays and Object-Oriented concepts to store and display student marks.
+                    </p>
+                    <ul class="flex text-xs font-mono text-gray-500 space-x-4 mt-auto">
+                        <li>Java</li>
+                        <li>OOP</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 flex-grow">
+        <div class="max-w-2xl mx-auto px-4 text-center reveal">
+            <p class="text-accent font-mono mb-4">04. What's Next?</p>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-100 mb-6">Get In Touch</h2>
+            <p class="text-gray-400 mb-12 text-lg">
+                I'm currently looking for study buddies, mentorship, or beginner-friendly internships. Whether you have a question or just want to say hi to a fellow engineering student, I'll try my best to get back to you!
+            </p>
+            <a href="mailto:hello@example.com" class="border border-accent text-accent hover:bg-accent/10 transition-all duration-300 px-8 py-4 rounded-md text-lg font-medium inline-block">
+                Say Hello
+            </a>
+            
+            <div class="mt-16 flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-accent transition-colors transform hover:-translate-y-1"><i class="fab fa-github text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-accent transition-colors transform hover:-translate-y-1"><i class="fab fa-linkedin text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-accent transition-colors transform hover:-translate-y-1"><i class="fab fa-twitter text-2xl"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-sm font-mono text-gray-500">
+        <p>Built by Alex Student</p>
+        <p class="mt-1">&copy; 2026. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Scroll Reveal Animation using Intersection Observer
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => {
+            revealOnScroll.observe(el);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+tittle{
+    color: blue;
+    font-family:'DM Sans', sans-serif; ;
+}
+h1{
+    font-family:"Archivo Black", sans-serif; 
+    font-weight: bolder;
+}
+h2{
+    color: blue;
+     font-family:'DM Sans', sans-serif;
+}
+span{
+    color: blueviolet;
+}
+body{
+   
+background-image: url(./background.jpg); }

@@ -1,0 +1,64 @@
+
+/*<i>
+   <div>
+    <h1><u>ARTI GANGWAR</u></h1>
+    <h2 style="color:blueviolet;">B.Tech First Year Student | Computer Science & Engineering</h2>
+    <br>
+    <hr>
+    <br>
+    <p>arti.bcs2026097@invertisuniversity.ac.in      +919058343790 UTTAR PRADESH, INDIA     </p>
+    <p>github.com/Arti-JS              linkdin.com/in/Arti Gangwar</p>
+    </div >
+    <p style="color:white ;">Career Objective: Motivated 1st</p>
+
+</body>
+</html>*/
+
+        body {
+            background-color: #0a192f;
+            color: #ccd6f6;
+        }
+        
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a192f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #112240;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64ffda;
+        }
+
+        /* Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Typing effect for the hero section */
+        .typing-text {
+            border-right: 2px solid #64ffda;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #64ffda; }
+        }
