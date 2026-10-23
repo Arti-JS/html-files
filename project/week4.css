@@ -1,0 +1,55 @@
+.club-name{
+    color:black;
+    font-size: 24px;
+    padding: 60px;
+    margin: 10px;
+    text-align: center;
+    background-color:aquamarine;
+    border-radius: 30px;
+}
+#table{
+    margin: 10px;
+    padding:10px;
+    font-size: 28px;
+    background-color:rosybrown;
+    border-radius: 30px;
+}
+.parent{
+    background-color:pink;
+    border: 3px solid black;
+    border-height: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+} 
+.parent1{
+    background-color:whitesmoke;
+    border: 3px solid black;
+    border-height: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+} 
+.register{
+    margin: 10px;
+    padding:10px;
+    font-size: 28px;
+    background-color:lightblue;
+    border-radius: 30px;
+    button{
+        background-color:bisque;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 20px;
+    }
+} 
+.nav{
+    margin: 10px;
+    text-align: center;
+    padding:10px;
+    font-size: 28px;
+    background-color:lightyellow;
+    border-radius: 30px;
+}

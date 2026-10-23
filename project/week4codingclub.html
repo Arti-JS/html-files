@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="week4.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./icon 2.jpg">
+    <title>CODING CLUB</title>
+</head>
+<body style="background-image:url(.././background.jpg);">
+    <div class="nav">
+        <a href="events">Events</a> |
+        <a href="Register">Register</a>
+    </div>
+    <div class="club-name">
+    <h1><i><u>Coding Club</u></i></h1>
+    <p><i>Learn , Build . Share .</i></p>
+    </div>
+    <div id="table">
+    <h2><i>Upcoming Events</i></h2>
+        <div class="parent">
+            <div >EVENT</div>
+            <div >DATE</div>
+            <div >VENUE</div>
+        </div>
+        <div class="parent1">
+            <div >HTML Workshop</div>
+            <div >2023-10-15</div>
+            <div >Lab 1</div>
+        </div>
+        <div class="parent1">
+            <div >Hackathon</div>
+            <div >2023-11-20</div>
+            <div >Seminar Hall</div>
+        </div>
+        <div class="parent1">
+            <div>Total Events: 2</div>
+        </div>
+    </div>
+    <div class="register">
+        
+        <h1><i>Register</i></h1>
+        <form>
+        
+            <label for="name">Name:</label>
+               <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label>
+               <input type="email" id="email" name="email" required><br><br>
+            <label for="password">Password:</label>
+               <input type="password" id="password" name="password" required><br><br>
+            <label for="date of birth">Date of Birth:</label>
+               <input type="date" id="date of birth" name="date of birth" required><br><br>
+            <label for="phone">Phone:</label>
+               <input type="tel" id="phone" name="phone" required><br><br>
+            <span>Gender  </span>
+            <label>
+               <input type="radio" name="gender" value="male"
+               required>Male </label>
+            <label>
+                  <input type="radio" name="gender" value="female"
+                  required>Female
+            </label>
+        </span><br><br>
+            <label for="event">Interest:</label>
+            <select id="event" name="event">
+                <option value="html_workshop">HTML Workshop</option>
+                <option value="hackathon">Hackathon</option>
+            </select><br><br>
+            <button type="register">REGISTER</button>
+            
+        </form>
+    </div>
+    </body>
+    
+</html>
