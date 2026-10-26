@@ -1,0 +1,8 @@
+#container{
+    border:3px solid black;
+    background-color: rgb(10, 10, 64);
+    justify-content: space-between;
+    color: aliceblue;
+    font-size:24px ;
+    align-items:row ;
+}
