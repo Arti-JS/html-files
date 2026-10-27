@@ -1,8 +1,90 @@
 #container{
     border:3px solid black;
+    display: flex;
+    align-items: center; 
+    padding:20px;
+    font-size:20px ;
     background-color: rgb(10, 10, 64);
     justify-content: space-between;
     color: aliceblue;
-    font-size:24px ;
-    align-items:row ;
+    margin:10px;
 }
+.box1{
+    font-size: 30px;
+}
+.container2{
+    display: flex;
+    justify-content: space-around;
+    flex:1;    
+}
+.box3{
+    border: 2px solid yellow;
+    border-radius: 10px;
+    padding:10px;
+    background-color:gold;
+    color: black;
+    font-size:20px ;
+
+}
+#main{
+ background-color: rgb(40, 40, 252);
+ border:2px solid  rgb(40, 40, 252);
+ align-items: center;
+ color: aliceblue;
+ font-size:22px ;
+ font-style:initial;
+ text-align: center;
+ padding:20px 20px;
+ margin:10px;
+ padding-bottom: 50px;
+}
+button{
+    border: 2px solid yellow;
+    border-radius: 10px;
+    padding:10px;
+    background-color:gold;
+    color: black;
+    font-size:20px ;
+}
+.HTML{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding:30px 20px;
+    background-color:lightsteelblue;
+    width:23%;
+    text-align: center;
+    margin: 10px;
+
+    
+}
+.CSS{
+    border: 2px solid black;
+     border-radius: 20px;
+      padding:30px 20px;
+      background-color:lightsteelblue;
+      width:23%;
+      text-align: center;
+      margin: 10px;
+    
+}
+.Java{
+    border: 2px solid black;
+     border-radius: 20px;
+      padding:30px 20px;
+      background-color:lightsteelblue;
+      width:23%;
+    text-align: center;
+    margin: 10px;
+}
+.GIT{
+    border: 2px solid black;
+     border-radius: 20px;
+      padding:30px 20px;
+      background-color:lightsteelblue;
+      width:23%;
+      text-align: center;
+      margin: 10px;
+    
+}
+
+
