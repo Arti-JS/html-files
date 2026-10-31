@@ -1,0 +1,66 @@
+.box1{
+    border: 3px solid rgb(38, 38, 104);
+    display: flex;
+    color: aliceblue;
+    background-color:rgb(38, 38, 104) ;
+    justify-content: space-between;
+}
+.home{
+    font-size:20px ;
+    margin:20px;
+   
+}
+.mainbox{
+    border:3px solid rgb(76, 76, 239) ;
+    background-color:rgb(76, 76, 239)  ;
+    text-align: center;
+    color: aliceblue;
+    img{
+        border-radius: 20px;
+        padding-bottom: 10px;
+    }
+
+}
+.boxes{
+    display: grid;
+    grid-template-columns: 500px 500px 500px;
+    /* margin:20px;
+    border:2px solid rgb(194, 194, 244) */
+   
+}
+.booking{
+     padding: 40px;
+    text-align: center; 
+     border:2px solid rgb(199, 199, 241);
+    background-color: rgb(199, 199, 241);
+    margin: 20px;
+    border-radius:10px ;
+    font-size: 20px;
+   
+}
+.price{
+   padding: 40px;
+    text-align: center;
+     border:2px solid rgb(199, 199, 241);
+    background-color: rgb(199, 199, 241);
+    margin: 20px;
+    border-radius:10px ;
+    font-size: 20px;
+}
+.help{
+    padding: 40px;
+    text-align: center; 
+     border:2px solid rgb(199, 199, 241);
+    background-color: rgb(199, 199, 241);
+    margin: 20px;
+    border-radius:10px ;
+    font-size: 20px;
+}
+.last{
+    border: 3px solid rgb(41, 41, 94) ;
+    color: aliceblue;
+    background-color:rgb(41, 41, 94);
+    text-align: center;
+    padding: 20px;
+    font-size:20px ;
+}
